@@ -24,7 +24,7 @@ http://httpbin.org/
 
 */
 
-fetch('http://google.com/search?q=smitha pitla')
+fetch('https://google.com/search?q=smitha pitla')
 .then(response => {
   if(response.ok)
     return response;
@@ -32,4 +32,15 @@ fetch('http://google.com/search?q=smitha pitla')
 })
 .then(response => response.json())
 .then(response => console.dir(response) || response)
+.catch(console.error)
+
+// Working example
+fetch('https://httpbin.org/html')
+.then(r => {
+  if(r.ok)
+      return r;
+  throw new Error('There was an error');
+})
+.then(r => r.text())
+.then(r => console.log(r) || r)
 .catch(console.error)
