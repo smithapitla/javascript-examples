@@ -10,5 +10,5 @@ request.onreadystatechange = function(){
   }
 }
 
-request.open(GET, 'http://google.com/search?q=smitha pitla', true);
+request.open(GET, 'http://Goggl.com/search?q=smitha pitla', true);
 request.send();
