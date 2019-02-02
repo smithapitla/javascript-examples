@@ -15,7 +15,8 @@ append(), set(), delete(), get(), getAll(), has(), entries(), keys(), values()
 
 Body
 ----
-arrayBuffer(), blob(), formData(), json(), text(), bodyUsed, Request.clone(), Response.clone()
+arrayBuffer(), blob(), formData(), json(), text(), // can be called only once on Body
+bodyUsed, Request.clone(), Response.clone()
 
 Useful websites
 -----------------
