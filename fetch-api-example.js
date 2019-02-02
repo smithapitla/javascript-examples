@@ -16,6 +16,11 @@ append(), set(), delete(), get(), getAll(), has(), entries(), keys(), values()
 Body
 ----
 arrayBuffer(), blob(), formData(), json(), text(), bodyUsed, Request.clone(), Response.clone()
+
+Useful websites
+-----------------
+http://httpbin.org/
+
 */
 
 fetch('http://google.com/search?q=smitha pitla')
