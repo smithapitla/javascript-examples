@@ -35,12 +35,46 @@ fetch('https://google.com')
 .catch(console.error)
 
 // Working example
+// Fetch Get Example
 fetch('https://httpbin.org/html')
 .then(r => {
   if(r.ok)
       return r;
   throw new Error('There was an error');
 })
+.then(r => {
+  console.info(r.type)
+  for(var pair of r.headers.entries()){
+    console.log(pair[0] +":"+pair[1]);
+  }
+  return r;
+})
 .then(r => r.text())
+//.then(r => console.log(r) || r)
+.catch(console.error)
+
+
+// Fetch POST example
+var data = new FormData();
+data.append('foo', 'bar')
+data.append('a', '1')
+
+fetch('https://httpbin.org/post', {
+  method: 'POST',
+  body: data
+})
+.then(r => {
+  if(r.ok)
+      return r;
+  throw new Error('There was an error');
+})
+.then(r => {
+  console.info(r.type)
+  for(var pair of r.headers.entries()){
+    console.log(pair[0] +":"+pair[1]);
+  }
+  return r;
+})
+.then(r => r.json())
 .then(r => console.log(r) || r)
 .catch(console.error)
