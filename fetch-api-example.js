@@ -24,7 +24,7 @@ http://httpbin.org/
 
 */
 
-fetch('https://google.com/search?q=smitha pitla')
+fetch('https://google.com')
 .then(response => {
   if(response.ok)
     return response;
